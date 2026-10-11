@@ -1,0 +1,64 @@
+# Common settings for every profile. Secrets are NOT written here: they come from the .env file / environment.
+spring:
+  application:
+    name: gamerift-backend
+  config:
+    # Reads KEY=VALUE lines from backend/.env as properties (the file is optional)
+    import: optional:file:.env
+  profiles:
+    default: dev
+  mongodb:
+    # Spring Boot 4 uses spring.mongodb.* for the connection
+    uri: ${MONGODB_URI}
+  data:
+    mongodb:
+      # Creates the indexes declared with @Indexed / @CompoundIndex
+      auto-index-creation: true
+
+server:
+  port: ${PORT:9090}
+  forward-headers-strategy: native
+  shutdown: graceful
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info
+
+springdoc:
+  api-docs:
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
+
+app:
+  jwt:
+    # At least 32 characters. Set JWT_SECRET in .env (the dev profile has a safe-for-dev default).
+    secret: ${JWT_SECRET:}
+    expiration-ms: ${JWT_EXPIRATION:3600000}
+  mail:
+    # console = print e-mails in the log (development). brevo = really send them through the Brevo API.
+    mode: ${MAIL_MODE:console}
+    brevo-api-key: ${BREVO_API_KEY:}
+    from-email: ${MAIL_FROM_EMAIL:}
+    from-name: ${MAIL_FROM_NAME:Gamerift}
+  frontend-url: ${FRONTEND_URL:http://localhost:5173}
+  # The backend's own public address. SSLCommerz needs full URLs to call back,
+  # so on a live demo this must be the tunnel/production address, not localhost.
+  public-url: ${BACKEND_URL:http://localhost:9090}
+  payment:
+    # SSLCommerz sandbox settings. Credentials are NEVER written here:
+    # store-id / store-passwd come from backend/.env (see .env.example).
+    sslcommerz:
+      base-url: ${SSLCOMMERZ_BASE_URL:https://sandbox.sslcommerz.com}
+      store-id: ${SSLCOMMERZ_STORE_ID:}
+      store-passwd: ${SSLCOMMERZ_STORE_PASSWD:}
+      sandbox: ${SSLCOMMERZ_SANDBOX:true}
+  admin:
+    email: ${ADMIN_EMAIL:}
+    password: ${ADMIN_PASSWORD:}
+  seed:
+    # Extra demo viewers (dev only) and a one-time wipe of the seeded collections
+    demo-users: false
+    reset: false

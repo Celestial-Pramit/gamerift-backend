@@ -1,0 +1,7 @@
+# Used on Render (set SPRING_PROFILES_ACTIVE=prod)
+app:
+  seed:
+    demo-users: false
+logging:
+  level:
+    com.gamerift: INFO

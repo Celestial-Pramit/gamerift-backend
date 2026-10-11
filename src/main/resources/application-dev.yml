@@ -1,0 +1,10 @@
+# Used when you run from IntelliJ (default profile)
+app:
+  jwt:
+    # DEV ONLY default so the app starts without setup. Production must set JWT_SECRET.
+    secret: ${JWT_SECRET:dev-only-secret-key-change-me-0123456789}
+  seed:
+    demo-users: true
+logging:
+  level:
+    com.gamerift: DEBUG

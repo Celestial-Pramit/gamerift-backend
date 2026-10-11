@@ -1,0 +1,16 @@
+# ---- Stage 1: build the jar with Maven + JDK 21 ----
+FROM maven:3.9-eclipse-temurin-21 AS build
+WORKDIR /app
+COPY pom.xml .
+RUN mvn -q -B dependency:go-offline
+COPY src ./src
+RUN mvn -q -B -DskipTests package
+
+# ---- Stage 2: run it with a small JRE, as a non-root user ----
+FROM eclipse-temurin:21-jre
+RUN useradd --system --create-home gamerift
+WORKDIR /app
+COPY --from=build /app/target/*.jar app.jar
+USER gamerift
+EXPOSE 9090
+ENTRYPOINT ["java", "-jar", "app.jar"]

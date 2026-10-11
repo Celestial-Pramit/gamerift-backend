@@ -1,0 +1,9 @@
+# Local run:  docker compose up --build   (uses your .env file and MongoDB Atlas)
+services:
+  backend:
+    build: .
+    ports:
+      - "9090:9090"
+    env_file: .env
+    environment:
+      SPRING_PROFILES_ACTIVE: ${SPRING_PROFILES_ACTIVE:-dev}

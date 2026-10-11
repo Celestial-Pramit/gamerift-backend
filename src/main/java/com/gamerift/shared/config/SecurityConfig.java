@@ -67,6 +67,7 @@ public class SecurityConfig {
                 // SSLCommerz calls these back itself (no JWT); every callback re-validates the payment
                 .requestMatchers("/api/payment/sslcommerz/**").permitAll()
                 .requestMatchers("/ws/**").permitAll()
+                .requestMatchers("/").permitAll()
                 .requestMatchers("/api/admin/**").hasRole("ADMIN")
                 .anyRequest().authenticated())
             .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class);

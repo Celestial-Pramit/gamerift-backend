@@ -5,6 +5,7 @@ app:
     secret: ${JWT_SECRET:dev-only-secret-key-change-me-0123456789}
   seed:
     demo-users: true
+    reset: true
 logging:
   level:
     com.gamerift: DEBUG

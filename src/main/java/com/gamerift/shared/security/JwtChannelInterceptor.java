@@ -11,6 +11,7 @@ import org.springframework.messaging.simp.stomp.StompCommand;
 import org.springframework.messaging.simp.stomp.StompHeaderAccessor;
 import org.springframework.messaging.support.ChannelInterceptor;
 import org.springframework.messaging.MessageDeliveryException;
+import org.springframework.stereotype.Component;
 
 
 import java.security.Principal;
@@ -21,6 +22,7 @@ import java.security.Principal;
  * SUBSCRIBE destinations must start with /user/queue/ or /topic/.
  * SEND destinations must start with /app/.
  */
+@Component
 public class JwtChannelInterceptor implements ChannelInterceptor {
 
     private static final Logger log = LoggerFactory.getLogger(JwtChannelInterceptor.class);

@@ -276,7 +276,7 @@ public class DataSeeder implements CommandLineRunner {
     stream("grand-finals", "NRG vs. FNC | MATCH HIGHLIGHTS | VALORANT Champions Paris 2025 - Grand Finals", "VALORANT Champions Tour", "esports", StreamPhase.LIVE, 72, 10112, 92, true, "tournament", "valorant"),
     stream("ranked-grind", "15 Unforgettable Plays From Masters London", "VALORANT Champions Tour", "esports", StreamPhase.LIVE, 184, 6145, 75, false, "valorant", "bangla"),
     stream("late-night-chill", "CS2 POV | DONK ON FIRE 60 KILLS! Faceit Ranked (DUST2) Voicecomms 60-27", "Siez CSGO", "fps", StreamPhase.LIVE, 140, 6752, 40, false, "chill", "bangla"),
-    stream("mobile-moba-scrims", "Pramit aka Orion JUST DROPPED A DOUBLE ACE IN ONE VALORANT MATCH!", "Pramit Dutta", "fps", StreamPhase.SOON, 12, 3992, 10, false, "mobile"),
+    stream("mobile-moba-scrims", "Pramit aka Orion JUST DROPPED A DOUBLE ACE IN ONE VALORANT MATCH!", "Pramit Dutta", "fps", StreamPhase.SOON, 12, 15000, 10, false, "mobile"),
     stream("any-percent-run", "TOP 60 BEST LEAGUE OF LEGENDS PENTAKILLS OF 2024!", "Protatomonster", "moba", StreamPhase.LIVE, 44, 2765, 66, false, "speedrun"),
     stream("dhaka-major-watchparty", "Top 10 Dota 2 Plays of All Time", "hOlyhexOr", "esports", StreamPhase.LIVE, 310, 13153, 88, false, "tournament", "bangla"),
     stream("customs-night", "Minecraft Beaten In 53 Seconds [FWR]", "HanabiYaki", "fps", StreamPhase.ENDED, 0, 13565, 5, false, "valorant"),

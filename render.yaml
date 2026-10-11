@@ -1,6 +1,6 @@
 services:
   - type: web
-    name: gamerift-pramit-api
+    name: gamerift-api
     runtime: docker
     plan: free
     region: singapore
@@ -14,9 +14,9 @@ services:
       - key: JAVA_TOOL_OPTIONS
         value: "-XX:MaxRAMPercentage=70 -XX:+UseSerialGC -Xss512k -XX:TieredStopAtLevel=1"
       - key: FRONTEND_URL
-        value: https://gamerift-pramit-web.onrender.com
+        value: https://gamerift-web.onrender.com
       - key: BACKEND_URL
-        value: https://gamerift-pramit-api.onrender.com
+        value: https://gamerift-api.onrender.com
       - key: JWT_EXPIRATION
         value: "3600000"
       - key: MAIL_MODE

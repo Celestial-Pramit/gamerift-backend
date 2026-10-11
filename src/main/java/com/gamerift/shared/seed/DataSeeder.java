@@ -273,18 +273,19 @@ public class DataSeeder implements CommandLineRunner {
         videoLinks = loadVideoLinks();
 
         liveStreamRepository.saveAll(List.of(
-                stream("grand-finals", "NRG vs. FNC | MATCH HIGHLIGHTS | VALORANT Champions Paris 2025 - Grand Finals", "VALORANT Champions Tour", "esports", StreamPhase.LIVE, 72, 10112, 92, true, "tournament", "valorant"),
-                stream("ranked-grind", "15 Unforgettable Plays From Masters London", "VALORANT Champions Tour", "esports", StreamPhase.LIVE, 184, 6145, 75, false, "valorant", "bangla"),
-                stream("late-night-chill", "CS2 POV | DONK ON FIRE🔥 60 KILLS! Faceit Ranked (DUST2) Voicecomms 60-27", "Siez CSGO", "fps", StreamPhase.LIVE, 140, 6752, 40, false, "chill", "bangla"),
-                stream("mobile-moba-scrims", "Pramit aka Orion JUST DROPPED A DOUBLE ACE IN ONE VALORANT MATCH! 🔥", "Pramit Dutta", "fps", StreamPhase.SOON, 12, 3992, 10, false, "mobile"),
-                stream("any-percent-run", "TOP 60 BEST LEAGUE OF LEGENDS PENTAKILLS OF 2024!", "Protatomonster", "moba", StreamPhase.LIVE, 44, 2765, 66, false, "speedrun"),
-                stream("dhaka-major-watchparty", "Top 10 Dota 2 Plays of All Time", "hOlyhexOr", "esports", StreamPhase.LIVE, 310, 13153, 88, false, "tournament", "bangla"),
-                stream("customs-night", "Minecraft Beaten In 53 Seconds [FWR]", "HanabiYaki", "fps", StreamPhase.ENDED, 0, 13565, 5, false, "valorant"),
-                stream("aim-lab-bootcamp", "Best Speed Running Moments From GDQ", "GameSpot", "fps", StreamPhase.LIVE, 25, 5490, 55, false, "valorant"),
-                stream("pocket-moba-ranked", "*NEW* WARZONE BEST HIGHLIGHTS! - Epic & Funny Moments #193", "Top WARZONE Moments", "moba", StreamPhase.LIVE, 95, 13563, 35, false, "mobile", "bangla"),
-                stream("charity-flood-relief", "Battlefield 6 WTF - Epic Moments Of The Week #26", "BATTLEFIELD WTF", "irl", StreamPhase.LIVE, 210, 7826, 80, false, "chill", "bangla"),
-                stream("speedrun-marathon-warmup", "Shroud Apex Legends Best Moments", "Supreme Gaming", "speedrun", StreamPhase.SOON, 180, 2443, 20, false, "speedrun"),
-                stream("coach-reacts", "Black Ops 6 Most Wanted | Realistic Immersive Ultra Graphics Gameplay [4K UHD 60FPS] Call of Duty", "HEDGEHOG x", "fps", StreamPhase.LIVE, 60, 12562, 60, false, "tournament")));
+    stream("grand-finals", "NRG vs. FNC | MATCH HIGHLIGHTS | VALORANT Champions Paris 2025 - Grand Finals", "VALORANT Champions Tour", "esports", StreamPhase.LIVE, 72, 10112, 92, true, "tournament", "valorant"),
+    stream("ranked-grind", "15 Unforgettable Plays From Masters London", "VALORANT Champions Tour", "esports", StreamPhase.LIVE, 184, 6145, 75, false, "valorant", "bangla"),
+    stream("late-night-chill", "CS2 POV | DONK ON FIRE 60 KILLS! Faceit Ranked (DUST2) Voicecomms 60-27", "Siez CSGO", "fps", StreamPhase.LIVE, 140, 6752, 40, false, "chill", "bangla"),
+    stream("mobile-moba-scrims", "Pramit aka Orion JUST DROPPED A DOUBLE ACE IN ONE VALORANT MATCH!", "Pramit Dutta", "fps", StreamPhase.SOON, 12, 3992, 10, false, "mobile"),
+    stream("any-percent-run", "TOP 60 BEST LEAGUE OF LEGENDS PENTAKILLS OF 2024!", "Protatomonster", "moba", StreamPhase.LIVE, 44, 2765, 66, false, "speedrun"),
+    stream("dhaka-major-watchparty", "Top 10 Dota 2 Plays of All Time", "hOlyhexOr", "esports", StreamPhase.LIVE, 310, 13153, 88, false, "tournament", "bangla"),
+    stream("customs-night", "Minecraft Beaten In 53 Seconds [FWR]", "HanabiYaki", "fps", StreamPhase.ENDED, 0, 13565, 5, false, "valorant"),
+    stream("aim-lab-bootcamp", "Best Speed Running Moments From GDQ", "GameSpot", "fps", StreamPhase.LIVE, 25, 5490, 55, false, "valorant"),
+    stream("pocket-moba-ranked", "*NEW* WARZONE BEST HIGHLIGHTS! - Epic and Funny Moments #193", "Top WARZONE Moments", "moba", StreamPhase.LIVE, 95, 13563, 35, false, "mobile", "bangla"),
+    stream("charity-flood-relief", "Battlefield 6 WTF - Epic Moments Of The Week #26", "BATTLEFIELD WTF", "irl", StreamPhase.LIVE, 210, 7826, 80, false, "chill", "bangla"),
+    stream("speedrun-marathon-warmup", "Shroud Apex Legends Best Moments", "Supreme Gaming", "speedrun", StreamPhase.SOON, 180, 2443, 20, false, "speedrun"),
+    stream("coach-reacts", "Black Ops 6 Most Wanted - Realistic Immersive Ultra Graphics Gameplay 4K UHD 60FPS Call of Duty", "HEDGEHOG x", "fps", StreamPhase.LIVE, 60, 12562, 60, false, "tournament")
+));
         log.info("Streams seeded.");
     }
 
